@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 09. Mrz 2018 um 08:39
+-- Erstellungszeit: 09. Mrz 2018 um 08:48
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.1.13
 
@@ -34,7 +34,10 @@ CREATE TABLE `allEvent` (
   `eventImg` varchar(500) NOT NULL,
   `eventType` varchar(85) NOT NULL,
   `eventDate` date NOT NULL,
-  `eventHour` datetime NOT NULL
+  `eventHour` datetime NOT NULL,
+  `eventAdress` varchar(185) NOT NULL,
+  `eventZipCode` int(55) NOT NULL,
+  `eventCity` varchar(85) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
