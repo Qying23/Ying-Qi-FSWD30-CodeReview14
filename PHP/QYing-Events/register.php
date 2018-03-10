@@ -11,6 +11,11 @@
  include_once 'actions/connect.php';
 
  $error = false;
+ $name  = "";
+ $nameError = "";
+ $email = "";
+ $emailError = "";
+ $passError = "";
 
  if ( isset($_POST['btn-signup']) ) {
 
@@ -124,12 +129,6 @@
         body{
         background-image: url('https://www.eventfinder.de/assets_custom/img/veranstaltungstipps/veranstaltungstipps-konzert_md.jpg');
       }
-      .reg{
-      background-color: rgba(255,255,255,0.6);
-      padding: 10%;
-      margin-top: 30px;
-      margin-bottom: 30px; 
-    }
     </style>
   </head>
   <body>

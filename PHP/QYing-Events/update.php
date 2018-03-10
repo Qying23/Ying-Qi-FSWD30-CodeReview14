@@ -14,19 +14,7 @@ if($_GET['id']) {
 <html>
     <head>
         <title>Edit Event</title>
-        <style type="text/css">
-
-            fieldset {
-                margin: auto;
-                margin-top: 100px;
-                width: 50%;
-            }
-
-            table tr th {
-                padding-top: 20px;
-            }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="addStyle.css">
     </head>
 
     <body>
@@ -43,8 +31,12 @@ if($_GET['id']) {
                     <td><input type="text" name="name" placeholder="First Name" value="<?php echo $data['name'] ?>" /></td>
                 </tr>     
                 <tr>
-                    <th>Image</th>
-                    <td><input type="text" name="Image" placeholder="image" value="<?php echo $data['Image'] ?>" /></td>
+                    <th>small Image</th>
+                    <td><input type="text" name="sImg" placeholder=" small image" value="<?php echo $data['sImg'] ?>" /></td>
+                </tr>
+                <tr>
+                    <th>big Image</th>
+                    <td><input type="text" name="bImg" placeholder=" big image" value="<?php echo $data['bImg'] ?>" /></td>
                 </tr>
 
                 <tr>
@@ -63,6 +55,26 @@ if($_GET['id']) {
                 <tr>
                     <th>Cost</th>
                     <td><input type="text" name="cost" placeholder="ticket cost " value="<?php echo $data['cost'] ?>" /></td>
+                </tr>
+                 <tr>
+                    <th>Adress</th>
+                    <td><input type="text" name="adress" placeholder="Adress " value="<?php echo $data['adress'] ?>" /></td>
+                </tr>
+                 <tr>
+                    <th>E-Mail</th>
+                    <td><input type="text" name="email" placeholder="E-Mail " value="<?php echo $data['email'] ?>" /></td>
+                </tr>
+                 <tr>
+                    <th>Phone</th>
+                    <td><input type="text" name="phone" placeholder="Phone " value="<?php echo $data['phone'] ?>" /></td>
+                </tr>
+                 <tr>
+                    <th>URL</th>
+                    <td><input type="text" name="url" placeholder="URL " value="<?php echo $data['url'] ?>" /></td>
+                </tr>
+                 <tr>
+                    <th>Capacity</th>
+                    <td><input type="text" name="capacity" placeholder="Capacity " value="<?php echo $data['capacity'] ?>" /></td>
                 </tr>
 
             

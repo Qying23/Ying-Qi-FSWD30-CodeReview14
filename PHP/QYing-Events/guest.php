@@ -10,6 +10,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mina" rel="stylesheet">
+	
+
+
 	</head>
 	<body>
 		<header>
@@ -36,11 +39,11 @@
 			            		<span class="caret"></span>
 			            	</a>
 			            	<ul class="dropdown-menu">
-				              <li><a href="cars_locations.php">Concert</a></li>
-				              <li><a href="cars_location1.php">Sport</a></li>
-				              <li><a href="cars_location2.php">Film</a></li>
-				              <li><a href="cars_location3.php">Theater</a></li>
-				              <li><a href="cars_location4.php">Cabaret</a></li>
+				              <li><a href="#">Concert</a></li>
+				              <li><a href="#">Sport</a></li>
+				              <li><a href="#">Film</a></li>
+				              <li><a href="#">Theater</a></li>
+				              <li><a href="#">Cabaret</a></li>
 				            </ul>
 			          	</li>
 			          	<li class="dropdown">
@@ -48,9 +51,9 @@
 			            		<span class="caret"></span>
 			            	</a>
 			            	<ul class="dropdown-menu">
-				              <li><a href="cars_locations.php">today</a></li>
-				              <li><a href="cars_location1.php">this week</a></li>
-				              <li><a href="cars_location2.php">this month</a></li>
+				              <li><a href="#">today</a></li>
+				              <li><a href="#">this week</a></li>
+				              <li><a href="#">this month</a></li>
 				            </ul>
 			          	</li>
 				      </ul>
@@ -61,70 +64,37 @@
 
 
 <!--  ***************    banner    ***************  -->
-		<div class="banner">
-			<div class="container" id="home">
-				<div class="row">
-					<div class="main_banner_area text-center">
-					
-						<h2> We have all events in Vienna</h2>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+	
+		<div class="banner" id="home"></div>
 
 <!--  ***************    events    ***************  -->
 
-		<section class="events">
-			<div class="container">
-				<div class="row">
-
-					<div class=" text-center">
-					
-						<h2> Events</h2>
-					
-					</div>
-					<table>
-						  <tr>
-						  	<th>Name</th>
-							<th>Image</th>
-						    <th>Description</th>
-						    <th>Cost</th>
-						  </tr>
-					<?php
-					// Create connection
-					$conn = new mysqli($localhost, $username, $password, $dbname);
-					// Check connection
-					
-					$sql = "SELECT * FROM allE";
-					$result = mysqli_query($conn, $sql);
-							
-					while($row = mysqli_fetch_assoc($result)) {
-
-						echo"<tr> 
-								<td>". $row["name"] ."</td>
-								<td>
-
-									<a href='".$row["urltest"]."'><img src='img/". $row["Image"] ."'></a>
-								</td>
-							    <td>". $row["description"] ."</td>
-							    <td>". $row["cost"] . " € </td>
-							</tr>
-							";
-						    } 
-						echo "</table>";
-
-							// Free result set
-							mysqli_free_result($result);
-							// Close connection
-							mysqli_close($conn);
-						?> 
-					
-				</div>
-			</div>
-		</section><!-- events -->
+		<div class="container sections" >
+		        <?php
+		            $sql = "SELECT sImg,name,eTime,id FROM allE";
+		            $result = $conn->query($sql);
+		 
+		            echo "<div class='row'>";    
+		            if($result->num_rows > 0) {
+		                while($row = $result->fetch_assoc()) {
+		                    echo "
+		                        <div class='col-md-4'>
+		                          <div class='thumbnail'>
+		                            <a href='view.php?id=".$row['id']."'>
+		                              <img src='".$row['sImg']."' style='width:100%;height:250px;'>
+		                              <div class='caption'>
+		                                <p>".$row['name']."</p>
+		                                <p>".$row['eTime']."</p>
+		                              </div>
+		                            </a>
+		                          </div>
+		                        </div>
+		";
+		                }
+		            }
+		            echo "</div>";
+		            ?>
+		</div>
 
 		<hr>
 

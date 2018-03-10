@@ -1,12 +1,15 @@
+body{
+  background-color:#e1f4f5;
+}
+
 /* navbar */
 .navbar-default{
-    background-image: url("img/navbar.png");
-    border-color: #ef6060;
-    color:black ;
+    background-color: #b6dcde;
+    border-color: #96ccce;
     padding: 10px;
 }
 .navbar-default .navbar-brand {
-    color: #ff073c;
+    color: grey;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 30px;
 
@@ -15,24 +18,18 @@
     color: #010101;
     font-family: 'Mina', sans-serif;
 }
-/* Banner section */
+/* Banner */
 .banner{
-  background-image: url("img/bild1.png");
+  background-image: url("img/foto.jpeg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
-}
-
-
-.main_banner_area h2{
-  font-family: 'Mina', sans-serif;
-  overflow:hidden;
-  color: black;
+  height: 350px;
 }
 
 .sections {
-    padding-top:  200px;
-    padding-bottom: 100px;
+    padding-top:  100px;
+    padding-bottom: 70px;
     position: relative;
     overflow: hidden; 
 }
@@ -64,13 +61,23 @@ tr:nth-child(even) {
 .reg{
   background-color: rgba(255,255,255,0.6);
   padding: 10%;
-  margin-bottom: 10%; 
+  margin-top: 30px;
+  margin-bottom: 30px; 
+ 
 }
+
+  
+     
 
 .log{
   background-image: url("img/high-tea.jpg");
   background-color: rgba(255,255,255,0.6);
   padding: 10%;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
+}
+footer{
+  background-color: #b6dcde;
+  border-color: #96ccce;
+  padding: 30px;
 }
 

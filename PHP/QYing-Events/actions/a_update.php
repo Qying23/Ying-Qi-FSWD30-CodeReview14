@@ -3,16 +3,23 @@
 require_once 'connect.php';
 
 if($_POST) {
-    $name = $_POST['name'];
-    $img = $_POST['Image'];
+   $name = $_POST['name'];
+    $sImg = $_POST['sImg'];
+    $bImg = $_POST['bImg'];
     $cat = $_POST['categorie'];
     $des = $_POST['description'];
     $time = $_POST['eTime'];
     $cost = $_POST['cost'];
+    $adr = $_POST['adress'];
+    $mail = $_POST['email'];
+    $phone = $_POST['phone'];
+    $url = $_POST['url'];
+    $capa = $_POST['capacity'];
+
 
     $id = $_POST['id'];
 
-    $sql = "UPDATE allE SET name = '$name', Image = '$img', categorie  = '$cat', description ='$des' , eTime  = '$time', cost ='$cost' WHERE id = {$id}";
+    $sql = "UPDATE allE SET name = '$name', sImg = '$sImg', bImg = '$bImg', categorie  = '$cat', description ='$des' , eTime  = '$time', cost ='$cost', adress = '$adr', email = '$mail', phone = '$phone', url = '$url',capacity = '$capa' WHERE id = {$id}";
 
     if($conn->query($sql) === TRUE) {
         echo "<p>Succcessfully Updated</p>";

@@ -8,6 +8,11 @@
 		exit;
 	}
 	$error = false;
+	$email = "";
+	$emailError = "";
+	$passError = "";
+
+
 	if( isset($_POST['btn-login']) ) {
 		// prevent sql injections/ clear user invalid inputs
 		$email = trim($_POST['email']);
@@ -61,17 +66,8 @@
 	
 	  body{
         	background-image: url('https://www.eventfinder.de/assets_custom/img/veranstaltungstipps/veranstaltungstipps-konzert_md.jpg');
-          	background-repeat: no-repeat;
-  			background-position: center top;
-  			background-size: 100% auto;
- 
+          	
       }
-      .reg{
-      background-color: rgba(255,255,255,0.6);
-      padding: 10%;
-      margin-top: 50px;
-      margin-bottom: 50px; 
-    }
    
 	  </style>
 	</head>
