@@ -98,7 +98,8 @@ if($_GET['id']) {
                 </tr>
                  <tr>
                     <th>URL</th>
-                    <td><?php echo $data['url'] ?></td>
+                    <td><a href="<?php echo $data['url'] ?>"><?php echo $data['url'] ?></a>
+                        </td>
                 </tr>
                 <tr>
                     <th>Description</th>
