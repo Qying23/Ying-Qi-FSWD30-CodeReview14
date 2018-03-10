@@ -83,7 +83,7 @@
 		                            <a href='view.php?id=".$row['id']."'>
 		                              <img src='".$row['sImg']."' style='width:100%;height:250px;'>
 		                              <div class='caption'>
-		                                <p>".$row['name']."</p>
+		                                <h3>".$row['name']."</h3>
 		                                <p>".$row['eTime']."</p>
 		                              </div>
 		                            </a>
